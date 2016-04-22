@@ -4,10 +4,10 @@
 NAMESPACE = "SlightlyImprovedBuffTracking"
 
 -- local function d() end
+local FADING_ANIMATION_THRESHOLD = 3
 
 function Sibt_Effect_OnMouseEnter(control)
     InitializeTooltip(GameTooltip, control, BOTTOM, 0, -5)
-    -- GameTooltip:SetBuff(control.buffSlot, "player")
     for _, effect in ipairs(control.effects) do
         GameTooltip:AddLine(effect.buffName)
     end
@@ -19,27 +19,20 @@ end
 
 function Sibt_Effect_OnUpdate(control)
     local effect = control.effects[1]
-    if not effect then
-        d(control.effects)
-        return
-    end
     if effect.isTimed then
-        if (effect.endTime > GetFrameTimeSeconds()) then
+        if (effect.endTime >= GetFrameTimeSeconds()) then
             local time = effect.endTime - GetFrameTimeSeconds()
+
             local text = ZO_FormatTime(time, TIME_FORMAT_STYLE_COLONS, TIME_FORMAT_PRECISION_TWELVE_HOUR)
             GetControl(control, "Time"):SetText(zo_strsplit(" ", text))
-        else
-            table.remove(control.effects, 1)
+
+            local animation = ZO_AlphaAnimation_GetAnimation(control)
+            if (time < FADING_ANIMATION_THRESHOLD) then
+                if not animation:IsPlaying() then
+                    animation:PingPong(1, 0, 600)
+                end
+            end
         end
-    end
-    if #control.effects > 1 then
-        local text = ""
-        for i = #control.effects, 1, -1 do
-            text = text.."•"
-        end
-        GetControl(control, "Count"):SetText(text)
-    else
-        GetControl(control, "Count"):SetText("")
     end
 end
 
@@ -50,11 +43,14 @@ EVENT_MANAGER:RegisterForEvent(NAMESPACE, EVENT_ADD_ON_LOADED, function(eventCod
 
         effectsPool:SetCustomFactoryBehavior(function(control)
             control.effects = {}
+            ZO_AlphaAnimation:New(control)
         end)
 
         effectsPool:SetCustomResetBehavior(function(control)
-            control.effects = {}
             control:ClearAnchors()
+            control.effects = {}
+            local animation = ZO_AlphaAnimation_GetAnimation(control)
+            animation:Stop()
         end)
 
         local function UpdateEffectsBar()

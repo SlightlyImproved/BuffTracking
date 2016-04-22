@@ -1,8 +1,7 @@
 <!-- Slightly Improved™ Buff Tracking 1.0.0 (Apr 21 2016) -->
 <!-- Licensed under CC BY-NC-SA 4.0 -->
 <GuiXml>
-    <Font name="SibtFont" font="$(BOLD_FONT)|18|shadow" />
-    <Font name="SibtFontSmall" font="$(BOLD_FONT)|12|outline" />
+    <Font name="SibtFont" font="$(BOLD_FONT)|16|soft-shadow-thick" />
 
     <Controls>
         <Control name="Sibt_Effect" mouseEnabled="true" virtual="true">
@@ -29,35 +28,28 @@
                     <Anchor point="CENTER" />
                 </Label>
 
-                <Label name="$(parent)Count" font="SibtFontSmall" horizontalAlignment="RIGHT">
-                    <Anchor point="BOTTOMRIGHT" offsetX="-4" />
-                </Label>
-
-                <Texture name="$(parent)Highlight" layer="OVERLAY" level="10" textureFile="esoui/art/ava/ava_itemhighlight_precision.dds" color="INTERFACE_COLOR_TYPE_GENERAL:INTERFACE_GENERAL_COLOR_ERROR" alpha="0.8" hidden="true">
-                    <Dimensions x="34" y="34" />
+                <Texture name="$(parent)Highlight" layer="OVERLAY" level="10" textureFile="esoui/art/ava/ava_itemhighlight_precision.dds" color="FF0000" alpha="0.8" hidden="true">
+                    <Dimensions x="32" y="32" />
                     <Anchor point="CENTER" />
                 </Texture>
 
-                <!-- <Texture name="$(parent)Shadow" layer="OVERLAY" textureFile="esoui/art/ava/ava_itemhighlight_precision.dds" color="000000">
-                    <Dimensions x="34" y="34" />
+                <Texture name="$(parent)Shadow" layer="OVERLAY" level="8" textureFile="esoui/art/ava/ava_itemhighlight_precision.dds" color="000000" alpha="0.4">
+                    <Dimensions x="32" y="32" />
                     <Anchor point="CENTER" />
-                </Texture> -->
+                </Texture>
 
                 <Texture name="$(parent)Icon" layer="1">
-                    <Dimensions x="34" y="34" />
+                    <Dimensions x="32" y="32" />
                     <Anchor point="CENTER" />
                 </Texture>
 
-                <!-- <Backdrop name="$(parent)Frame" layer="OVERLAY">
+                <Backdrop name="$(parent)Frame" inherits="ZO_DefaultBackdrop">
                     <AnchorFill />
-                    <Center file="esoui/art/uicombatoverlay/uicombatoverlaycenter.dds" />
-                    <Edge file="EsoUI/Art/WorldMap/worldmap_frame_edge.dds" edgeFileWidth="128" edgeFileHeight="16" />
-                    <Insets left="16" top="16" right="-16" bottom="-16" />
-                </Backdrop> -->
+                </Backdrop>
 
-                <Texture name="$(parent)Frame" textureFile="esoui/art/miscellaneous/colorpicker_swatchframe.dds" layer="BACKGROUND">
+                <!-- <Texture name="$(parent)Frame" layer="BACKGROUND" textureFile="esoui/art/actionbar/abilityframe64_up.dds">
                     <AnchorFill />
-                </Texture>
+                </Texture> -->
             </Controls>
         </Control>
 
