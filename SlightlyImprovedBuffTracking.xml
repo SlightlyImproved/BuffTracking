@@ -1,7 +1,7 @@
 <!-- Slightly Improved™ Buff Tracking 1.0.0 (Apr 21 2016) -->
 <!-- Licensed under CC BY-NC-SA 4.0 -->
 <GuiXml>
-    <Font name="SibtFont" font="$(BOLD_FONT)|16|soft-shadow-thick" />
+    <Font name="SibtFont" font="$(BOLD_FONT)|18|soft-shadow-thick" />
 
     <Controls>
         <Control name="Sibt_Effect" mouseEnabled="true" virtual="true">
