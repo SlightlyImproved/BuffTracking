@@ -4,23 +4,17 @@
     <Font name="SibtFont" font="$(BOLD_FONT)|18|soft-shadow-thick" />
 
     <Controls>
-        <Control name="Sibt_Effect" mouseEnabled="true" virtual="true">
+        <Control name="Sibt_BuffTrackerEntry" mouseEnabled="true" virtual="true">
             <Dimensions x="36" y="36" />
 
-            <OnMouseDown>
-                self:GetParent():StartMoving()
-            </OnMouseDown>
-            <OnMouseUp>
-                self:GetParent():StopMovingOrResizing()
-            </OnMouseUp>
             <OnMouseEnter>
-                Sibt_Effect_OnMouseEnter(self)
+                Sibt_BuffTrackerEntry_OnMouseEnter(self)
             </OnMouseEnter>
             <OnMouseExit>
-                Sibt_Effect_OnMouseExit(self)
+                Sibt_BuffTrackerEntry_OnMouseExit(self)
             </OnMouseExit>
             <OnUpdate>
-                Sibt_Effect_OnUpdate(self)
+                Sibt_BuffTrackerEntry_OnUpdate(self)
             </OnUpdate>
 
             <Controls>
@@ -53,7 +47,7 @@
             </Controls>
         </Control>
 
-        <Control name="Sibt_EffectsBar" mouseEnabled="true" resizeToFitDescendents="true" virtual="true">
+        <Control name="Sibt_BuffTracker" mouseEnabled="true" resizeToFitDescendents="true" virtual="true">
             <Dimensions x="36" y="36" />
             <Anchor point="BOTTOM" relativePoint="TOP" offsetY="-2" />
         </Control>
