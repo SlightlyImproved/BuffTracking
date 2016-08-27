@@ -1,5 +1,5 @@
--- Slightly Improved™ Buff Tracking 1.1.0 (Apr 24 2016)
--- Licensed under CC BY-NC-SA 4.0
+-- Slightly Improved™ Buff Tracking 1.1.1 (Aug 27 2016)
+-- Licensed under MIT © 2016 Arthur Corenzan
 
 local NAMESPACE = "SlightlyImprovedBuffTracking"
 
