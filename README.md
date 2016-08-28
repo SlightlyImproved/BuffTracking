@@ -4,7 +4,7 @@
 
 ## Download
 
-You cand [get the last version](http://www.esoui.com/downloads/info1356-SlightlyImprovedBuffTracking.html) for free on ESOUI.
+You can [get the last version](http://www.esoui.com/downloads/info1356-SlightlyImprovedBuffTracking.html) for free on ESOUI.
 
 ## About
 
@@ -14,6 +14,10 @@ Slightly Improved™ Buff Tracking is a lightweight, good enough, effect tracker
 - Display countdown and visual cue when the effect is about to expire.
 - Highlight negative effects.
 - Sits comfortably right above your ability bar and fades with it.
+
+## Change log
+
+See [CHANGELOG.bbcode](CHANGELOG.bbcode).
 
 ## License
 
