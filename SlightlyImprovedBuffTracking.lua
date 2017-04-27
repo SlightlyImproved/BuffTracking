@@ -118,7 +118,7 @@ end
 function Sibt_BuffTrackerEntry_OnMouseEnter(control)
     InitializeTooltip(GameTooltip, control, BOTTOM, 0, -5)
     for _, effect in ipairs(control.effectStack) do
-        GameTooltip:AddLine(effect.buffName)
+        GameTooltip:AddLine(zo_strformat("<<1>>", effect.buffName))
     end
 end
 
