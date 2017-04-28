@@ -169,12 +169,15 @@ EVENT_MANAGER:RegisterForEvent(NAMESPACE, EVENT_ADD_ON_LOADED, function(eventCod
                 effect.buffType,
                 effect.effectType,
                 effect.abilityType,
-                effect.statusEffectType = GetUnitBuffInfo("player", i)
+                effect.statusEffectType,
+                effect.abilityId,
+                effect.canClickOff,
+                effect.castByPlayer = GetUnitBuffInfo("player", i)
                 effect.duration = effect.endTime - effect.startTime
 
                 -- d(effect, "---")
-
                 tracker:AddEffect(effect)
+
             end
 
             tracker:Update()
