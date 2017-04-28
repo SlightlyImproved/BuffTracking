@@ -157,28 +157,28 @@ EVENT_MANAGER:RegisterForEvent(NAMESPACE, EVENT_ADD_ON_LOADED, function(eventCod
         local function UpdateBuffTracker()
             tracker:Reset()
 
-        for i = 1, GetNumBuffs("player") do
-            local effect = {}
+            for i = 1, GetNumBuffs("player") do
+                local effect = {}
 
-            effect.buffName,
-            effect.startTime,
-            effect.endTime,
-            effect.buffSlot,
-            effect.stackCount,
-            effect.iconFile,
-            effect.buffType,
-            effect.effectType,
-            effect.abilityType,
-            effect.statusEffectType,
-            effect.abilityId,
-            effect.canClickOff,
-            effect.castByPlayer = GetUnitBuffInfo("player", i)
-            effect.duration = effect.endTime - effect.startTime
+                effect.buffName,
+                effect.startTime,
+                effect.endTime,
+                effect.buffSlot,
+                effect.stackCount,
+                effect.iconFile,
+                effect.buffType,
+                effect.effectType,
+                effect.abilityType,
+                effect.statusEffectType,
+                effect.abilityId,
+                effect.canClickOff,
+                effect.castByPlayer = GetUnitBuffInfo("player", i)
+                effect.duration = effect.endTime - effect.startTime
 
-            -- d(effect, "---")
-            tracker:AddEffect(effect)
+                -- d(effect, "---")
+                tracker:AddEffect(effect)
 
-        end
+            end
 
             tracker:Update()
         end
