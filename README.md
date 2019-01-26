@@ -1,24 +1,27 @@
 # Slightly Improved™ Buff Tracking
 
-> Buff and debuff tracking bar for ESO.
+> Elder Scrolls Online add-on for a slightly better buff/debuff tracking.
 
 ## Download
 
-You can [get the last version](http://www.esoui.com/downloads/info1356-SlightlyImprovedBuffTracking.html) for free on ESOUI.
+You can [download the latest version from ESOUI](http://www.esoui.com/downloads/info1356-SlightlyImprovedBuffTracking.html).
 
 ## About
 
-Slightly Improved™ Buff Tracking is a lightweight, good enough, effect tracker, for those of you who doesn't like to deface the game too much. I've spent a good amount of time making sure it look so stock you'd say ZOS made it but forgot to mention.
-
-- Tracks timed and permanent effects.
-- Display countdown and visual cue when the effect is about to expire.
-- Highlight negative effects.
-- Sits comfortably right above your ability bar and fades with it.
+- Move the buf/debuff icons to above the action bar.
+- Move the duration label to over the icon.
+- Allow you to choose between a label and a cooldown effect for the duration indicator.
 
 ## Change log
 
 See [CHANGELOG.bbcode](CHANGELOG.bbcode).
 
-## License
+## Acknowledgement
 
-Licensed under [MIT](LICENSE).
+Slightly Improved™ add-ons originally created by [Kevin](http://www.esoui.com/forums/member.php?action=getinfo&userid=1084) who kindly allowed me to continue his legacy.
+
+## Legal
+
+[The MIT License](LICENSE.md) © 2016 Arthur Corenzan.
+
+This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved. See [Add-on Terms of Use](https://account.elderscrollsonline.com/add-on-terms).
