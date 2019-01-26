@@ -1,7 +1,10 @@
-## APIVersion: 100016
+## APIVersion: 100025
 ## Title: Slightly Improved™ Buff Tracking
-## Version: 1.1.1
+## Version: 2.0.0
+## AddOnVersion: 200
 ## License: MIT
+## SavedVariables: SlightlyImprovedBuffTracking_SavedVars
+## DependsOn: LibAddonMenu-2.0
 
-SlightlyImprovedBuffTracking.xml
+Settings.lua
 SlightlyImprovedBuffTracking.lua
