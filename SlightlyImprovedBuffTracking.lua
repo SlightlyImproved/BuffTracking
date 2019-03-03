@@ -103,6 +103,11 @@ CALLBACK_MANAGER:RegisterCallback(NAMESPACE.."_OnAddOnLoaded", function(savedVar
 			end
 		end
 	end
+
+    -- Fix bug where buff/debuff icons show up when you log back in while dead.
+    if IsUnitDead("player") then
+        BUFF_DEBUFF_FRAGMENT:Hide()
+    end
 end)
 
 -- Add-on entrypoint. You should NOT need to edit below this line.
