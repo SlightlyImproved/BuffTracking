@@ -23,7 +23,7 @@ local options =
         choices = {"Label", "Cooldown"},
         getFunc = function() return settings.durationIndicator end,
         setFunc = function(value) settings.durationIndicator = value end,
-        requiresReload = true,
+        -- requiresReload = true,
     },
 }
 

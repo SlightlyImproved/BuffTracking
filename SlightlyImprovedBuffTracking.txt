@@ -1,4 +1,4 @@
-## APIVersion: 100025
+## APIVersion: 100026
 ## Title: Slightly Improved™ Buff Tracking
 ## Version: 2.0.0
 ## AddOnVersion: 200
